@@ -18,6 +18,9 @@ bilibili_json = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v
 # 播放页广告
 bilibili.view = type=http-response,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/(?:View|ViewProgress|TFInfo)$,requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js
 
+# 播放页广告 ViewUnite
+bilibili.viewUnite = type=http-response,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.viewunite\.v1\.View\/(?:View|ViewProgress|RelatesFeed)$,requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js
+
 [MITM]
 hostname = %APPEND% app.bilibili.com, *.bilibili.com, *biliapi.net, *i?.hdslb.com
 
