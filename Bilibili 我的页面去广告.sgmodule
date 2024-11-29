@@ -4,6 +4,9 @@
 [Map Local]
 #去掉左上角云视听图标
 ^https:\/\/i\d\.hdslb\.com\/bfs\/activity-plat\/static\/\w+ data-type=text data=" " status-code=200
+#尝试去除 up 推荐广告
+^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity data="https://raw.githubusercontent.com/kokoryh/Script/master/data/bili_activity.json" header="Content-Type: application/json"
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 
 [Script]
 # BiliBili_哔哩哔哩_视频播放下方商品推广@ddgksf2013
