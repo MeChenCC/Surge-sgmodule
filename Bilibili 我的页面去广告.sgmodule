@@ -6,17 +6,11 @@
 ^https:\/\/i\d\.hdslb\.com\/bfs\/activity-plat\/static\/\w+ data-type=text data=" " status-code=200
 
 [Script]
-# BiliBili_哔哩哔哩_视频播放下方商品推广@ddgksf2013
-bilibili_json = type=http-response, pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
-
 # 精简我的页面
 精简我的页面 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo), script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
 
 # 移除热搜广告@RUCU6，Kelee
 移除热搜广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
-
-# 移除 up 主推荐广告
-移除 up 主推荐广告 = type=http-response, pattern=^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.viewunite\.v1\.View\/(?:RelatesFeed|View)$, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body=true, binary-body-mode=true
 
 # 播放页广告
 bilibili.view = type=http-response,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/(?:View|ViewProgress|TFInfo)$,requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js
@@ -26,4 +20,3 @@ bilibili.viewUnite = type=http-response,pattern=^https:\/\/(?:grpc\.biliapi\.net
 
 [MITM]
 hostname = %APPEND% i*.hdslb.com, grpc.biliapi.net, api.biliapi.net, api.bilibili.com, app.bilibili.com,
-h2 = true
