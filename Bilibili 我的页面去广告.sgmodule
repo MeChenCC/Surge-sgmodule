@@ -19,5 +19,5 @@ bilibili_json = type=http-response, pattern=^https?:\/\/api\.bili(api|bili)\.(ne
 移除 up 主推荐广告 = type=http-response, pattern=^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.viewunite\.v1\.View\/(?:RelatesFeed|View)$,requires-body=1,binary-body-mode=1,script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js
 
 [MITM]
-hostname = %APPEND% = i*.hdslb.com, api.biliapi.net, api.bilibili.com, app.bilibili.com, grpc.biliapi.net
+hostname = %APPEND% i*.hdslb.com, api.biliapi.net, api.bilibili.com, app.bilibili.com, grpc.biliapi.net
 h2 = true
