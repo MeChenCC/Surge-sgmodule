@@ -1,0 +1,35 @@
+#!name=Tieba 去广告
+#!desc=🔗 [2024/11/29 14:34:45] Fork on Loon Zenmofeishi
+#!tag=APP Adblock
+
+# 🔗 模块链接
+#SUBSCRIBED http://script.hub/file/_start_/http://local.text/_end_/local.sgmodule?type=surge-module&target=surge-module&del=true&localtext=%23!name%3DTieba%20%E5%8E%BB%E5%B9%BF%E5%91%8A%0A%23!desc%3DFork%20on%20Loon%20Zenmofeishi%0A%0A%5BRule%5D%0ADOMAIN%2Cafd.baidu.com%2CREJECT%2Cextended-matching%2Cpre-matching%0ADOMAIN%2Cmobads.baidu.com%2CREJECT%2Cextended-matching%2Cpre-matching%0ADOMAIN%2C180.76.76.200%2CREJECT-DROP%2Cextended-matching%2Cpre-matching%0AIP-CIDR%2C180.76.76.200%2F32%2CREJECT-DROP%2Cno-resolve%2Cpre-matching%0A%0A%5BMap%20Local%5D%0A%5Ehttps%3A%5C%2F%5C%2Ftiebac%5C.baidu%5C.com%5C%2Fc%5C%2Ff%5C%2Fsearch%5C%2Fdiscover%20data-type%3Dtext%20data%3D%22%7B%7D%22%20status-code%3D200%0A%0A%5Ehttps%3A%5C%2F%5C%2Ftiebac%5C.baidu%5C.com%5C%2Fc%5C%2Ff%5C%2Fforum%5C%2FforumGuide%20data-type%3Dtext%20data%3D%22%7B%7D%22%20status-code%3D200%0A%0A%5BScript%5D%0A%E6%B8%85%E7%90%86%E9%A6%96%E9%A1%B5%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttps%3A%5C%2F%5C%2Ftiebac%5C.baidu%5C.com%5C%2Flivefeed%5C%2Ffeed%2C%20script-path%3Dhttps%3A%2F%2Fkelee.one%2FResource%2FScript%2FTieba%2FTieba_remove_ads.js%2C%20requires-body%3Dtrue%0A%0A%E6%B8%85%E7%90%86%E4%BE%A7%E6%8B%89%E6%8A%BD%E5%B1%89%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttps%3A%5C%2F%5C%2Ftiebac%5C.baidu%5C.com%5C%2Fc%5C%2Ff%5C%2Fsidebar%5C%2Fhome%2C%20script-path%3Dhttps%3A%2F%2Fkelee.one%2FResource%2FScript%2FTieba%2FTieba_remove_ads.js%2C%20requires-body%3Dtrue%0A%0A%E6%B8%85%E7%90%86%E6%88%91%E7%9A%84%E9%A1%B5%E9%9D%A2%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttps%3A%5C%2F%5C%2Ftiebac%5C.baidu%5C.com%5C%2Fc%5C%2Fu%5C%2Fuser%5C%2Fprofile%2C%20script-path%3Dhttps%3A%2F%2Fkelee.one%2FResource%2FScript%2FTieba%2FTieba_remove_ads.js%2C%20requires-body%3Dtrue%0A%0A%E6%B8%85%E7%90%86%E9%A6%96%E9%A1%B5%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttps%3A%5C%2F%5C%2Ftieba%5C.baidu%5C.com%5C%2Fc%5C%2Ff%5C%2Ffrs%5C%2FfrsBottom%2C%20script-path%3Dhttps%3A%2F%2Fkelee.one%2FResource%2FScript%2FTieba%2FTieba_remove_ads.js%2C%20requires-body%3Dtrue%0A%0AJSON%E5%A4%84%E7%90%86%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttp(s%3A%5C%2F%5C%2Ftiebac%7C%3A%5C%2F%5C%2Fc%5C.tieba)%5C.baidu%5C.com%5C%2F(c%5C%2Ff%5C%2F(frs%5C%2F(page%7Cthreadlist%7CgeneralTabList)%7Cpb%5C%2Fpage%7Cexcellent%5C%2Fpersonalized)%24%7Ctiebaads%5C%2Fcommonbatch%7Cc%5C%2Fs%5C%2Fsync%24)%2C%20script-path%3Dhttps%3A%2F%2Fkelee.one%2FResource%2FScript%2FTieba%2Ftieba-json.js%2C%20requires-body%3Dtrue%2C%20timeout%3D10%0A%0AProto%E5%A4%84%E7%90%86%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttp(s%3A%5C%2F%5C%2Ftiebac%7C%3A%5C%2F%5C%2Fc%5C.tieba)%5C.baidu%5C.com%5C%2Fc%5C%2Ff%5C%2F(frs%5C%2F(page%7Cthreadlist%7CgeneralTabList)%7Cpb%5C%2Fpage%7Cexcellent%5C%2Fpersonalized)%5C%3Fcmd%2C%20script-path%3Dhttps%3A%2F%2Fkelee.one%2FResource%2FScript%2FTieba%2Ftieba-proto.js%2C%20requires-body%3Dtrue%2C%20binary-body-mode%3Dtrue%2C%20timeout%3D10%0A%0A%5BMITM%5D%0Ahostname%20%3D%20%25APPEND%25%20tiebac.baidu.com%2C%20tieba.baidu.com
+
+
+[Rule]
+DOMAIN,afd.baidu.com,REJECT,extended-matching,pre-matching
+DOMAIN,mobads.baidu.com,REJECT,extended-matching,pre-matching
+DOMAIN,180.76.76.200,REJECT-DROP,extended-matching,pre-matching
+IP-CIDR,180.76.76.200/32,REJECT-DROP,no-resolve,pre-matching
+
+[Map Local]
+^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover data-type=text data="{}" status-code=200
+
+^https:\/\/tiebac\.baidu\.com\/c\/f\/forum\/forumGuide data-type=text data="{}" status-code=200
+
+[Script]
+清理首页 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/livefeed\/feed, script-path=https://kelee.one/Resource/Script/Tieba/Tieba_remove_ads.js, requires-body=true
+
+清理侧拉抽屉 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home, script-path=https://kelee.one/Resource/Script/Tieba/Tieba_remove_ads.js, requires-body=true
+
+清理我的页面 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile, script-path=https://kelee.one/Resource/Script/Tieba/Tieba_remove_ads.js, requires-body=true
+
+清理首页 = type=http-response, pattern=^https:\/\/tieba\.baidu\.com\/c\/f\/frs\/frsBottom, script-path=https://kelee.one/Resource/Script/Tieba/Tieba_remove_ads.js, requires-body=true
+
+JSON处理 = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$), script-path=https://kelee.one/Resource/Script/Tieba/tieba-json.js, requires-body=true, timeout=10
+
+Proto处理 = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd, script-path=https://kelee.one/Resource/Script/Tieba/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=10
+
+[MITM]
+hostname = %APPEND% tiebac.baidu.com, tieba.baidu.com
+
