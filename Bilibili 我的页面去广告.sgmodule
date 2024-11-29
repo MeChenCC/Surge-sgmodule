@@ -7,7 +7,7 @@
 
 [Script]
 # 精简我的页面
-BilibiliRemoveAds = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo), requires-body=true, max-size=3145728, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js
+精简我的页面 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo), requires-body=true, max-size=3145728, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js
 
 # 移除up主推荐广告
 移除up主推荐广告 = type=http-response, pattern=^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.viewunite\.v1\.View\/(?:RelatesFeed|View)$,requires-body=1,binary-body-mode=1,script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js
