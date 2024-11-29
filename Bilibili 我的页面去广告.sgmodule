@@ -1,5 +1,6 @@
 #!name=Bilibili 我的页面去广告
-#!desc=Fork on ddsgk2013&Kelee@kokoryh.去除左上角云电视，我的页面处理，移除商品推荐
+#!desc=去除左上角云电视，我的页面处理，移除商品推荐。
+#来源：Fork on ddsgk2013&Kelee@kokoryh
 
 [Map Local]
 #去掉左上角云视听图标
