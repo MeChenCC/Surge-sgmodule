@@ -15,6 +15,8 @@ bilibili_json = type=http-response, pattern=^https?:\/\/api\.bili(api|bili)\.(ne
 # 移除热搜广告@RUCU6，Kelee
 移除热搜广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
 
+# 移除 up 主推荐广告
+移除 up 主推荐广告 = type=http-response, pattern=^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.viewunite\.v1\.View\/(?:RelatesFeed|View)$,requires-body=1,binary-body-mode=1,script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js
 
 [MITM]
 hostname = %APPEND% app.bilibili.com, *.bilibili.com, *biliapi.net, *i?.hdslb.com
