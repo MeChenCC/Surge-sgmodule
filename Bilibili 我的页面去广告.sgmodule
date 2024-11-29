@@ -6,6 +6,7 @@
 
 
 [Map Local]
+#去掉左上角云视听图标
 ^https:\/\/i\d\.hdslb\.com\/bfs\/activity-plat\/static\/\w+ data-type=text data=" " status-code=200
 
 [Script]
