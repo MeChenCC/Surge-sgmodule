@@ -1,23 +1,38 @@
-#!name=Bilibili 我的页面去广告
-#!desc=🔗 [2024/11/29 14:51:38] Fork on ddsgk2013, Kelee。去除左上角云电视，我的页面处理，移除商品推荐
+#!name=广告过滤整理
+#!desc=Fork on Kelee。打断常用 APP 的广告
 
-# 🔗 模块链接
-#SUBSCRIBED http://script.hub/file/_start_/http://local.text/_end_/local.sgmodule?type=surge-module&target=surge-module&del=true&localtext=%23!name%3DBilibili%20%E6%88%91%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%8E%BB%E5%B9%BF%E5%91%8A%0A%23!desc%3DFork%20on%20ddsgk2013%2C%20Kelee%E3%80%82%E5%8E%BB%E9%99%A4%E5%B7%A6%E4%B8%8A%E8%A7%92%E4%BA%91%E7%94%B5%E8%A7%86%EF%BC%8C%E6%88%91%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%A4%84%E7%90%86%EF%BC%8C%E7%A7%BB%E9%99%A4%E5%95%86%E5%93%81%E6%8E%A8%E8%8D%90%0A%0A%5BMap%20Local%5D%0A%5Ehttps%3A%5C%2F%5C%2Fi%5Cd%5C.hdslb%5C.com%5C%2Fbfs%5C%2Factivity-plat%5C%2Fstatic%5C%2F%5Cw%2B%20data-type%3Dtext%20data%3D%22%20%22%20status-code%3D200%0A%0A%5BScript%5D%0A%23%20%EF%BD%9E%20BiliBili_%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9_%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E4%B8%8B%E6%96%B9%E5%95%86%E5%93%81%E6%8E%A8%E5%B9%BF%40ddgksf2013%0Abilibili_json%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttps%3F%3A%5C%2F%5C%2Fapi%5C.bili(api%7Cbili)%5C.(net%7Ccom)%5C%2Fpgc%5C%2Fseason%5C%2Fapp%5C%2Frelated%5C%2Frecommend%5C%3F%2C%20script-path%3Dhttps%3A%2F%2Fgithub.com%2Fddgksf2013%2FScripts%2Fraw%2Fmaster%2Fbilibili_json.js%2C%20requires-body%3Dtrue%2C%20max-size%3D-1%2C%20timeout%3D60%0A%0A%23%20%EF%BD%9E%20BiliBili_%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9_%E6%88%91%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%A4%84%E7%90%86%40ddgksf2013%0Abilibili_json%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttps%3F%3A%5C%2F%5C%2Fapp%5C.bilibili%5C.com%5C%2Fx%5C%2Fv2%5C%2Faccount%5C%2Fmine%2C%20script-path%3Dhttps%3A%2F%2Fgithub.com%2Fddgksf2013%2FScripts%2Fraw%2Fmaster%2Fbilibili_json.js%2C%20requires-body%3Dtrue%2C%20max-size%3D-1%2C%20timeout%3D60%0A%0A%23%20%E7%A7%BB%E9%99%A4%E7%83%AD%E6%90%9C%E5%B9%BF%E5%91%8A%0A%E7%A7%BB%E9%99%A4%E7%83%AD%E6%90%9C%E5%B9%BF%E5%91%8A%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttps%3A%5C%2F%5C%2Fapp%5C.bilibili%5C.com%5C%2Fx%5C%2Fv2%5C%2Fsearch%5C%2Fsquare%5C%3F%2C%20script-path%3Dhttps%3A%2F%2Fkelee.one%2FResource%2FScript%2FBilibili%2FBilibili_remove_ads.js%2C%20requires-body%3Dtrue%0A%0A%23%20%E7%A7%BB%E9%99%A4%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E5%B9%BF%E5%91%8A%20%3D%20type%3Dhttp-response%2C%20pattern%3D%5Ehttps%3A%5C%2F%5C%2F(%3F%3Aapp%5C.bilibili%5C.com%7Cgrpc%5C.biliapi%5C.net)%5C%2Fbilibili%5C.polymer%5C.app%5C.search%5C.v1%5C.Search%5C%2FSearchAll%24%2C%20script-path%3Dhttps%3A%2F%2Fkelee.one%2FResource%2FScript%2FBilibili%2FBilibili_proto_kokoryh.js%2C%20requires-body%3Dtrue%2C%20binary-body-mode%3Dtrue%0A%0A%0A%5BMITM%5D%0Ahostname%20%3D%20%25APPEND%25%20app.bilibili.com%2C%20*.bilibili.com%2C%20*biliapi.net%2C%20*i%3F.hdslb.com
+[Rule]
+# 虎牙直播开屏广告
+DOMAIN,business.msstatic.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,v1d.szbdyd.com,REJECT,extended-matching,pre-matching
+URL-REGEX,"^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$",REJECT,extended-matching
 
+# 米家
+DOMAIN,sdkconfig.ad.xiaomi.com,REJECT,extended-matching,pre-matching
+
+[URL Rewrite]
+# 车来了 - 为您推荐
+^https:\/\/cdn\.web\.chelaile\.net\.cn\/info-flow\/index\.html - reject
 
 [Map Local]
-^https:\/\/i\d\.hdslb\.com\/bfs\/activity-plat\/static\/\w+ data-type=text data=" " status-code=200
+# 米家
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) data-type=text data="{}" status-code=200
 
-[Script]
-# ～ BiliBili_哔哩哔哩_视频播放下方商品推广@ddgksf2013
-bilibili_json = type=http-response, pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+# 掌上英雄联盟
+^https?:\/\/us\.l\.qq\.com\/exapp data-type=text data=" " status-code=200
 
-# ～ BiliBili_哔哩哔哩_我的页面处理@ddgksf2013
-bilibili_json = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+# 深圳通
+^https?:\/\/ecard\.shenzhentong\.com\/wxweb\/bwxppub2\/QryAdvertList\.do data-type=text data=" " status-code=200
 
-# 移除热搜广告
-移除热搜广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
+# 猫眼 - 移除开屏广告、红包悬浮
+^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ data-type=text data="{}" status-code=200
+
+# 淘票票 - 开屏广告
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryloadingbanner\/ data-type=text data="{}" status-code=200
+
+# 淘票票 - 弹窗
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ data-type=text data="{}" status-code=200
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, *.bilibili.com, *biliapi.net, *i?.hdslb.com
+hostname = %APPEND% usiness.msstatic.com, sdkconfig.ad.xiaomi.com, cdn.web.chelaile.net.cn, home.mi.com, us.l.qq.com, ecard.shenzhentong.com, p0.pipi.cn, acs.m.taobao.com
 
