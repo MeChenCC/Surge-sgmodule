@@ -1,5 +1,5 @@
 #!name = 📺 BiliBili: ⚙️ Enhanced
-#!desc=🔗 [2024/11/30 12:42:55] 哔哩哔哩：增强模式\n中国站功能增强及UI自定义
+#!desc=🔗 哔哩哔哩：增强模式\n中国站功能增强及UI自定义
 #!openUrl = http://boxjs.com/#/app/BiliBili.Enhanced
 #!author = VirgilClyne[https://github.com/VirgilClyne]
 #!homepage = https://Enhanced.BiliUniverse.io
@@ -15,16 +15,17 @@
 
 
 [Script]
-
+# 🍟 Bilibili Enhanced
 📺 BiliBili.Enhanced.x.resource.show.tab.v2 = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/resource\/show\/tab\/v2\?, requires-body=1, script-path=https://github.com/BiliUniverse/Enhanced/releases/download/v0.5.8/response.bundle.js, argument=Home.Tab="{{{Home.Tab}}}"&Home.Tab_default="{{{Home.Tab_default}}}"&Home.Top_left="{{{Home.Top_left}}}"&Home.Top="{{{Home.Top}}}"&Bottom="{{{Bottom}}}"
 
+# 注释掉🍟的我的页面的修改
 # 📺 BiliBili.Enhanced.x.v2.account.mine = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/account\/mine(\/ipad)?\?, requires-body=1, script-path=https://github.com/BiliUniverse/Enhanced/releases/download/v0.5.8/response.bundle.js, argument=Home.Tab="{{{Home.Tab}}}"&Home.Tab_default="{{{Home.Tab_default}}}"&Home.Top_left="{{{Home.Top_left}}}"&Home.Top="{{{Home.Top}}}"&Bottom="{{{Bottom}}}"
 
 📺 BiliBili.Enhanced.x.v2.region.index = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/region\/index\?, requires-body=1, script-path=https://github.com/BiliUniverse/Enhanced/releases/download/v0.5.8/response.bundle.js, argument=Home.Tab="{{{Home.Tab}}}"&Home.Tab_default="{{{Home.Tab_default}}}"&Home.Top_left="{{{Home.Top_left}}}"&Home.Top="{{{Home.Top}}}"&Bottom="{{{Bottom}}}"
 
 📺 BiliBili.Enhanced.x.v2.channel.region.list = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/channel\/region\/list\?, requires-body=1, script-path=https://github.com/BiliUniverse/Enhanced/releases/download/v0.5.8/response.bundle.js, argument=Home.Tab="{{{Home.Tab}}}"&Home.Tab_default="{{{Home.Tab_default}}}"&Home.Top_left="{{{Home.Top_left}}}"&Home.Top="{{{Home.Top}}}"&Bottom="{{{Bottom}}}"
 
-# 精简我的页面
+# 精简我的页面@Kelee
 精简我的页面 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo), requires-body=true, max-size=3145728, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js
 
 
