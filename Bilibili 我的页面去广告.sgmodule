@@ -24,8 +24,14 @@
 # 移除开屏广告
 移除开屏广告 = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/(splash\/(brand\/list|event\/list2|list|show)|feed\/index(\/story)?|search\/square), requires-body=1, engine=webview, script-path=https://github.com/BiliUniverse/ADBlock/releases/download/v0.6.13/response.bundle.js
 
-#Tab栏
-bilibili.json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(?:resource\/show\/tab\/v2|v2\/feed\/index(?:\/story)?\?),requires-body=1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.json.js
+# 底栏Tab栏
+Tab栏修改 = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(?:resource\/show\/tab\/v2|v2\/feed\/index(?:\/story)?\?),requires-body=1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.json.js
+
+# 去除青少年模式
+去除青少年模式 = type=http-response, pattern=^https:\/\/(grpc|app)\.bili(bili\.com|api\.net)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus, requires-body=1, binary-body-mode=1, engine=webview, script-path=https://github.com/BiliUniverse/ADBlock/releases/download/v0.6.13/response.bundle.js
+
+#应用首页标签修改
+应用首页标签修改 = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/resource\/show\/tab\/v2\?, requires-body=1, script-path=https://github.com/BiliUniverse/Enhanced/releases/download/v0.5.8/response.bundle.js, argument=Home.Tab="直播tab,推荐tab,hottopic,kj"&Home.Tab_default="推荐tab"&Home.Top_left="mine"&Home.Top="消息Top
 
 [MITM]
 hostname = %APPEND% i*.hdslb.com, grpc.biliapi.net, api.biliapi.net, api.bilibili.com, app.bilibili.com
