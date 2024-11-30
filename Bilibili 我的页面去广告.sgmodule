@@ -24,6 +24,9 @@
 # 移除开屏广告
 移除开屏广告 = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/(splash\/(brand\/list|event\/list2|list|show)|feed\/index(\/story)?|search\/square), requires-body=1, engine=webview, script-path=https://github.com/BiliUniverse/ADBlock/releases/download/v0.6.13/response.bundle.js
 
+#Tab栏
+bilibili.json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(?:resource\/show\/tab\/v2|v2\/feed\/index(?:\/story)?\?),requires-body=1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.json.js
+
 [MITM]
 hostname = %APPEND% i*.hdslb.com, grpc.biliapi.net, api.biliapi.net, api.bilibili.com, app.bilibili.com
 
