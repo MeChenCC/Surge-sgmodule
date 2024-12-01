@@ -1,36 +1,11 @@
 #!name=Bilibili 我的页面去广告
-#!desc=去除左上角云电视，我的页面处理，移除商品推荐。
+#!desc=对我的页面进行处理
 #来源：Fork on ddsgk2013&Kelee@kokoryh
-
-[URL Rewrite]
-# 去除搜索中的默认关键词
-^https?:\/\/(grpc|app)\.bili(bili\.com|api\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ - reject
-
-[Map Local]
-# 去除搜索中的大家都在搜
-^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words data-type=text data="{}" header="application/json"
-
-#去掉左上角云视听图标
-^https:\/\/i\d\.hdslb\.com\/bfs\/activity-plat\/static\/\w+ data-type=text data=" " status-code=200
 
 [Script]
 # 精简我的页面
 精简我的页面 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo), requires-body=true, max-size=3145728, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js
 
-# 移除up主推荐广告
-移除up主推荐广告 = type=http-response,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.viewunite\.v1\.View\/(?:View|ViewProgress|RelatesFeed)$,requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js
-移除播放页广告 = type=http-response,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/(?:View|ViewProgress|TFInfo)$,requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js
-
-# 移除开屏广告
-移除开屏广告 = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/(splash\/(brand\/list|event\/list2|list|show)|feed\/index(\/story)?|search\/square), requires-body=1, engine=webview, script-path=https://github.com/BiliUniverse/ADBlock/releases/download/v0.6.13/response.bundle.js
-
-# 底栏Tab栏
-Tab栏修改 = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(?:resource\/show\/tab\/v2|v2\/feed\/index(?:\/story)?\?),requires-body=1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.json.js
-
-# 去除青少年模式
-去除青少年模式 = type=http-response, pattern=^https:\/\/(grpc|app)\.bili(bili\.com|api\.net)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus, requires-body=1, binary-body-mode=1, engine=webview, script-path=https://github.com/BiliUniverse/ADBlock/releases/download/v0.6.13/response.bundle.js
-
-
 [MITM]
-hostname = %APPEND% i*.hdslb.com, grpc.biliapi.net, api.biliapi.net, api.bilibili.com, app.bilibili.com
+hostname = %APPEND% app.bilibili.com
 
