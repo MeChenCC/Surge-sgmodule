@@ -9,6 +9,10 @@
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
 #!date=2024-12-02 16:37:35
 
+[General]
+# DNS劫持
+hijack-dns = %APPEND% 114.114.114.114 
+
 [Rule]
 DOMAIN,adse.ximalaya.com,REJECT,extended-matching,pre-matching
 DOMAIN,adse.wsa.ximalaya.com,REJECT,extended-matching,pre-matching
