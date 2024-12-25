@@ -25,4 +25,5 @@ http-response-jq ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tacti
 ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ data-type=text data="{}" status-code=200
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}" status-code=200
 
+[MITM]
 hostname = %APPEND% wxs.qq.com, wxsnsdy.wxs.qq.com, wxsmsdy.video.qq.com, wxsnsdythumb.wxs.qq.com, ccmsupport-sz.tenpay.com, mcsp.cloudpnr.com, saas-ad.cloudpnr.com, mp.weixin.qq.com
