@@ -1,0 +1,28 @@
+#!name = WeChat优化
+#!desc = 广告过滤，外部链接解锁
+
+[Rule]
+# 广告过滤
+DOMAIN-SUFFIX, wxs.qq.com, REJECT,extended-matching,pre-matching
+
+# 微信小程序通用规则
+DOMAIN,wxsnsdy.wxs.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN,wxsmsdy.video.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT,extended-matching,pre-matching
+
+[URL Rewrite]
+# 乘车码
+^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi - reject
+
+[Body Rewrite]
+http-response-jq ^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$ 'delpaths([["data"]])'
+http-response-jq ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ 'delpaths([["data",0]])'
+http-response-jq ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ 'delpaths([["data",1]])'
+http-response-jq ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ 'delpaths([["data",2]])'
+
+[Map Local]
+# 移除公众号中的推广内容 //mp.weixin.qq.com
+^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ data-type=text data="{}" status-code=200
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}" status-code=200
+
+hostname = %APPEND% wxs.qq.com, wxsnsdy.wxs.qq.com, wxsmsdy.video.qq.com, wxsnsdythumb.wxs.qq.com, ccmsupport-sz.tenpay.com, mcsp.cloudpnr.com, saas-ad.cloudpnr.com, mp.weixin.qq.com
