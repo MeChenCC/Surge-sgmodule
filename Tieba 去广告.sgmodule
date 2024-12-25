@@ -1,6 +1,7 @@
 #!name=Tieba 去广告
 #!desc=Fork on Loon Zenmofeishi & Kelee & app2smile
 #!tag=APP Adblock
+#!homepage=https://raw.githubusercontent.com/MeChenCC/LoonKissSurge/refs/heads/main/Surge/Beta/%E8%B4%B4%E5%90%A7%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
 
 [Rule]
 DOMAIN,afd.baidu.com,REJECT,extended-matching,pre-matching
