@@ -2,6 +2,10 @@
 #!desc=对我的页面进行处理
 #来源：Fork on ddsgk2013&Kelee@kokoryh
 
+[Rule]
+#去除 b 站云视听图标
+URL-REGEX,^https?:\/\/i\d+\.hdslb\.com\/bfs\/activity-plat\/static\/.*660w_160h.*\.png$,REJECT-TINYGIF
+
 [Script]
 # 精简我的页面
 精简我的页面 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo), requires-body=true, max-size=3145728, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js
