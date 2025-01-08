@@ -1,6 +1,21 @@
 #!name=美团去广告
 #!tag=APP Adblock
 
+
+[Rule]
+# > 美团
+DOMAIN,flowplus.meituan.net,REJECT
+DOMAIN-SUFFIX,analytics.meituan.net,REJECT
+DOMAIN-SUFFIX,meituan.xn,REJECT
+DOMAIN-SUFFIX,meituan.yoga,REJECT
+DOMAIN-SUFFIX,meituangov.cn,REJECT
+DOMAIN-SUFFIX,report.meituan.com,REJECT
+DOMAIN-SUFFIX,wmlog.meituan.com,REJECT
+DOMAIN-SUFFIX,ad.e.waimai.sankuai.com,REJECT
+DOMAIN-SUFFIX,mads.meituan.com,REJECT
+DOMAIN-SUFFIX,dreport.meituan.net,REJECT
+DOMAIN-SUFFIX,d.meituan.net,REJECT
+
 [Map Local]
 # > 美团 & 美团外卖
 ^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data-type=text data="{}" status-code=200
