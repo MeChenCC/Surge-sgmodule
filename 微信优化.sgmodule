@@ -3,7 +3,7 @@
 
 [Rule]
 # 广告过滤
-DOMAIN-SUFFIX, wxs.qq.com, REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 
 # 微信小程序通用规则
 DOMAIN,wxsnsdy.wxs.qq.com,REJECT,extended-matching,pre-matching
