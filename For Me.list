@@ -1,6 +1,8 @@
 # 自用代理分流
 DOMAIN-SUFFIX,konami.net
 DOMAIN-SUFFIX,missav.com
+DOMAIN-SUFFIX,missav.ws
+DOMAIN-SUFFIX,missav.ai
 DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,cdn-msp.jmcomic.me
 DOMAIN-SUFFIX,mushroomtrack.com
