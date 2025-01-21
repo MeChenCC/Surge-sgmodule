@@ -25,9 +25,5 @@ http-response-jq ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tacti
 ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ data-type=text data="{}" status-code=200
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}" status-code=200
 
-[Script]
-# 公众号广告
-公众号广告 = type=http-response, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path=https://kelee.one/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body=true
-
 [MITM]
 hostname = %APPEND% wxs.qq.com, wxsnsdy.wxs.qq.com, wxsmsdy.video.qq.com, wxsnsdythumb.wxs.qq.com, ccmsupport-sz.tenpay.com, mcsp.cloudpnr.com, saas-ad.cloudpnr.com, mp.weixin.qq.com
