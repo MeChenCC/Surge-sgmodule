@@ -23,4 +23,4 @@ DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT,extended-matching,pre-matching
 ^https?:\/\/ecard\.shenzhentong\.com\/wxweb\/bwxppub2\/QryAdvertList\.do data-type=text data=" " status-code=200
 
 [MITM]
-hostname = %APPEND% wxs.qq.com, wxsnsdy.wxs.qq.com, wxsmsdy.video.qq.com, wxsnsdythumb.wxs.qq.com, ccmsupport-sz.tenpay.com, mcsp.cloudpnr.com, saas-ad.cloudpnr.com, mp.weixin.qq.com
+hostname = %APPEND% wxs.qq.com, wxsnsdy.wxs.qq.com, wxsmsdy.video.qq.com, wxsnsdythumb.wxs.qq.com, ccmsupport-sz.tenpay.com, mp.weixin.qq.com, ecard.shenzhentong.com
