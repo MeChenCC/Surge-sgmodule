@@ -10,6 +10,14 @@ URL-REGEX,"^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$",REJECT,extended
 # 米家
 DOMAIN,sdkconfig.ad.xiaomi.com,REJECT,extended-matching,pre-matching
 
+# 中国电信
+DOMAIN,ad.21cn.com,REJECT,extended-matching,pre-matching
+DOMAIN,ad.k.21cn.com,REJECT,extended-matching,pre-matching
+DOMAIN,admarket.21cn.com,REJECT,extended-matching,pre-matching
+DOMAIN,adshows.21cn.com,REJECT,extended-matching,pre-matching
+IP-CIDR,122.229.8.47/32,REJECT,no-resolve,pre-matching
+IP-CIDR,122.229.29.89/32,REJECT,no-resolve,pre-matching
+
 [URL Rewrite]
 # 车来了 - 为您推荐
 ^https:\/\/cdn\.web\.chelaile\.net\.cn\/info-flow\/index\.html - reject
@@ -34,5 +42,5 @@ DOMAIN,sdkconfig.ad.xiaomi.com,REJECT,extended-matching,pre-matching
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ data-type=text data="{}" status-code=200
 
 [MITM]
-hostname = %APPEND% usiness.msstatic.com, sdkconfig.ad.xiaomi.com, cdn.web.chelaile.net.cn, home.mi.com, us.l.qq.com, ecard.shenzhentong.com, p0.pipi.cn, acs.m.taobao.com
+hostname = %APPEND% usiness.msstatic.com, sdkconfig.ad.xiaomi.com, cdn.web.chelaile.net.cn, home.mi.com, us.l.qq.com, ecard.shenzhentong.com, p0.pipi.cn, acs.m.taobao.com, ad.21cn.com, ad.k.21cn.com, admarket.21cn.com, adshows.21cn.com
 
