@@ -7,8 +7,10 @@
 # 开屏广告
 ^https:\/\/api1\.zongheng\.com\/iosapi\/system\/startup$ - reject
 # 猜测去除tab的广告
-^https:\/\/api1\.zongheng\.com\/tab\/list$ - reject
+^https:\/\/api?\.zongheng\.com\/iosapi\/tab\/list$ - reject
 ^https:\/\/api1\.zongheng\.com\/iosapi\/giftBag\/checkSingleBooks$ - reject
+^https:\/\/api1\.zongheng\.com\/iosapi\/giftBag\/popup$ - reject
+^https:\/\/api1\.zongheng\.com\/iosapi\/giftBag\/isExpire$ - reject
 
 [Map Local]
 # 弹窗
