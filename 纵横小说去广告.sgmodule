@@ -1,0 +1,18 @@
+#!name=纵横小说去广告
+#!desc=移除纵横小说开屏广告和弹窗
+#!category=APP Adblock
+#!tag=APP Adblock
+
+[URL Rewrite]
+# 开屏广告
+^https:\/\/api1\.zongheng\.com\/iosapi\/system\/startup$ - reject
+# 猜测去除tab的广告
+^https:\/\/api1\.zongheng\.com\/tab\/list$ - reject
+^https:\/\/api1\.zongheng\.com\/iosapi\/giftBag\/checkSingleBooks$ - reject
+
+[Map Local]
+# 弹窗
+^https:\/\/api2\.zongheng\.com\/api\/giftBag\/bindingBag$ data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api?.zongheng.com
