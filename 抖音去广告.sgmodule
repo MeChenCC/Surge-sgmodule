@@ -5,6 +5,18 @@
 #!category=APP Adblock
 #!tag=APP Adblock
 
+[Rule]
+AND,((IP-CIDR,110.249.199.75/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,111.225.147.191/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,111.63.61.101/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,220.243.141.0/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((OR,((DOMAIN-SUFFIX,bytegecko.com),(DOMAIN-SUFFIX,byteeffecttos.com))),(DOMAIN-KEYWORD,ncdn)),REJECT
+
+[URL Rewrite]
+^https:\/\/api5-normal-lq\.amemv\.com\/api\/ad\/ - reject
+^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/api\/ad\/ - reject
+^https:\/\/zlink\.ugsdk\.cn\/ad\/ - reject
+
 [Body Rewrite]
 http-response-jq ^https:\/\/aweme\.snssdk\.com\/aweme\/homepage\/sidebar_data\/\? 'delpaths([["data_map","recently_apps"]])'
 http-response-jq ^https:\/\/aweme\.snssdk\.com\/aweme\/homepage\/sidebar_data\/\? 'delpaths([["data_map","recently_users"]])'
@@ -14,4 +26,4 @@ http-response-jq ^https:\/\/aweme\.snssdk\.com\/tfe\/api\/request_combine\/v1\/\
 http-response-jq ^https:\/\/aweme\.snssdk\.com\/tfe\/api\/request_combine\/v1\/\?need_personal_recommend 'if (getpath(["data","/service/settings/v3/","body","data","settings"]) | has("homepage_tab_skin_enable")) then (setpath(["data","/service/settings/v3/","body","data","settings","homepage_tab_skin_enable"]; false)) else . end'
 
 [MITM]
-hostname = %APPEND% aweme.snssdk.com
+hostname = %APPEND% aweme.snssdk.com, api5-normal-m.amemv.com
