@@ -1,7 +1,6 @@
 #!name=贴吧去广告
 #!desc=TB
 #!author=怎么肥事、app2smile、可莉
-#!update=2025-03-23 09:52
 
 [Rule]
 DOMAIN,afd.baidu.com,REJECT,extended-matching,pre-matching
