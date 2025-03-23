@@ -1,6 +1,8 @@
 #!name=贴吧去广告
-#!desc=TB
+#!desc=贴吧净化、推荐页面去信息流广告(app2smile)、帖子详情页广告(app2smile)、推荐页悬浮图标、帖子详情页悬浮图标、去除搜索热词、直播页顶部推广图、个人页面精简
 #!author=怎么肥事、app2smile、可莉
+#!category=APP Adblock
+#!tag=APP Adblock
 
 [Rule]
 DOMAIN,afd.baidu.com,REJECT,extended-matching,pre-matching
