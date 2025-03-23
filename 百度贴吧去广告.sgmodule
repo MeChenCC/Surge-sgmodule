@@ -4,7 +4,6 @@
 #!update=2025-03-23 09:52
 
 [Rule]
-[Rule]
 DOMAIN,afd.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN,mobads.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN,180.76.76.200,REJECT-DROP,extended-matching,pre-matching
