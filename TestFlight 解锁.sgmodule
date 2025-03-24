@@ -1,7 +1,7 @@
 #!name=TestFlight 解锁
 #!desc=解除 TestFlight 区域限制
-#!category=APP Adblock
-#!tag=APP Adblock
+#!category=Basic
+#!tag=Basic
 
 [General]
 skip-proxy = %APPEND% iosapps.itunes.apple.com
