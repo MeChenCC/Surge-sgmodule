@@ -7,8 +7,8 @@
 [Rule]
 DOMAIN,afd.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN,mobads.baidu.com,REJECT,extended-matching,pre-matching
-DOMAIN,180.76.76.200,REJECT,extended-matching,pre-matching
-IP-CIDR,180.76.76.200/32,REJECT,no-resolve,pre-matching
+DOMAIN,180.76.76.200,REJECT-DROP,extended-matching,pre-matching
+IP-CIDR,180.76.76.200/32,REJECT-DROP,no-resolve,pre-matching
 
 [Map Local]
 ^https:\/\/tiebac\.baidu\.com\/c\/u\/chat\/getChatSubscriptionList data-type=text data="{}" status-code=200
