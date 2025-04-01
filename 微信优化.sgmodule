@@ -4,6 +4,9 @@
 [Rule]
 # 广告过滤
 DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
+# DNS加速
+DOMAIN,dns.weixin.qq.com,DIRECT,extended-matching
+DOMAIN,dns.weixin.qq.com.cn,DIRECT,extended-matching
 
 # 微信小程序通用规则
 DOMAIN-SUFFIX,wxsnsdy.wxs.qq.com,REJECT,extended-matching,pre-matching
