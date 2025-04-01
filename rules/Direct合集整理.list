@@ -1,5 +1,5 @@
 # NAME: Direct 自用合集整理
-# 美团
+# > 美团
 DOMAIN-SUFFIX,dianping.com
 DOMAIN-SUFFIX,maoyan.com
 DOMAIN-SUFFIX,meituan.com
@@ -7,7 +7,7 @@ DOMAIN-SUFFIX,meituan.net
 DOMAIN-SUFFIX,mtyun.com
 DOMAIN-SUFFIX,neixin.cn
 DOMAIN-SUFFIX,sankuai.com
-# 饿了么
+# > 饿了么
 DOMAIN-SUFFIX,ele.me
 DOMAIN-SUFFIX,ele.to
 DOMAIN-SUFFIX,eleme.cn
@@ -21,3 +21,5 @@ DOMAIN-SUFFIX,fengniaozhongbao.cn
 DOMAIN-SUFFIX,xingxuanwaimai.com
 DOMAIN-SUFFIX,xyzele.com
 DOMAIN-SUFFIX,youcaishop.cn
+# > NGA
+DOMAIN-KEYWORD,nga
