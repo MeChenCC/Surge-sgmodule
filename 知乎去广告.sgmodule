@@ -1,6 +1,8 @@
 #!name=知乎去广告
 #!desc=zhihu去广告模块自用
 #!homepage=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/script/zheye/zheye.sgmodule
+#!category=APP Adblock
+#!tag=APP Adblock
 
 [Rule]
 DOMAIN,appcloud.zhihu.com,REJECT
