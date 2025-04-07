@@ -1,5 +1,5 @@
 #!name=Zhihu去广告
-#!desc=Script hub 转译 sve1r 的 QX 插件
+#!desc=集合sve1r 和 RUCU6 的重写规则
 
 [Rule]
 DOMAIN,appcloud.zhihu.com,REJECT,extended-matching,pre-matching
