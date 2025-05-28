@@ -1,0 +1,15 @@
+#!name=腾讯视频去广告
+#!desc=移除开屏广告、视频开头广告
+#!category=APP Adblock
+#!tag=APP Adblock
+
+[Rule]
+IP-CIDR,47.110.187.87/32,REJECT,no-resolve,pre-matching
+DOMAIN,pgdt.gtimg.cn,REJECT-DROP
+AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)),REJECT-DROP
+
+[URL Rewrite]
+URL-REGEX,^https:\/\/ossgw\.alicdn\.com\/creatives-assets/prod/feupload/user,REJECT
+
+[MITM]
+hostname = %APPEND% ossgw.alicdn.com
