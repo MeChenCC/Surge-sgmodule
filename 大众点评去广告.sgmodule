@@ -2,7 +2,7 @@
 #!category=APP Adblock
 #!tag=APP Adblock
 
-[RULE]
+[Rule]
 DOMAIN, r.dianping.com, REJECT, extended-matching, pre-matching
 DOMAIN, tte.meituan.com, REJECT, extended-matching, pre-matching
 DOMAIN, dpmtpush.dianping.com, REJECT, extended-matching, pre-matching
