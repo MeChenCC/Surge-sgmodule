@@ -2,10 +2,9 @@
 #!desc=过滤捷停车微信公众号与APP广告
 #!author=Androidcn[https://github.com/androidcn]
 #!openUrl=https://apps.apple.com/app/id1071487344
-#!tag=APP Adblock
+#!category=APP Adblock
 #!loon_version=3.2.1(745)
 #!homepage=https://github.com/androidcn
-#!date=2024-09-23 17:16:15
 
 [Rule]
 DOMAIN,csg.jparking.cn,REJECT
