@@ -5,7 +5,7 @@
 
 [URL Rewrite]
 ^https?:\/\/www\.g(oogle)?\.cn https://www.google.com 307
-^https?:\/\/www\.g(oogle)?\.hk https://www.google.com 307
+^https?:\/\/www\.g(oogle)?\.com.hk https://www.google.com 307
 
 [MITM]
 hostname = %APPEND% www.g.cn, www.google.cn, www.google.com.hk
